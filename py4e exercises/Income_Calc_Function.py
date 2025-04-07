@@ -1,3 +1,10 @@
+#Define function to compute pay with overtime included
+def computepay(time, money):
+    if time > 40:
+        return (40 * money) + ((time - 40) * (money *1.5))
+    else:
+        return time * money
+
 # Gather inputs
 hrs = input('Enter Hours Worked: ')
 
@@ -17,13 +24,7 @@ try:
 except:
     print('Error, please enter numeric value')
     quit()
-
-#Define function to compute pay with overtime included
-def computepay(time, money):
-    if time > 40:
-        return (40 * money) + ((time - 40) * (money *1.5))
-    else:
-        return time * money
+    
 
 # Display Income
 print('Pay:', computepay(hrs, rate))
