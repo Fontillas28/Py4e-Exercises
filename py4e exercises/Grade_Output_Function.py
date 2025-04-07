@@ -1,13 +1,3 @@
-#Gather grade input
-score = input('Enter Score:')
-
-#Try & Except
-try:
-    score = float(score)
-except:
-    print('Bad Score')
-    quit()
-
 #Define function for grade computation
 def computegrade(grade):
     if grade >= 0.9 and grade <= 1.0:
@@ -22,5 +12,15 @@ def computegrade(grade):
         return print('F')
     else:
         return print('Bad Grade')
+
+#Gather grade input
+score = input('Enter Score:')
+
+#Try & Except
+try:
+    score = float(score)
+except:
+    print('Bad Score')
+    quit()
     
 computegrade(score)
